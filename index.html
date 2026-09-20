@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dr House — Εγχειρίδιο χρήστη</title>
+<style>
+:root{color-scheme:light;--ink:#163042;--muted:#506573;--accent:#096a72;--line:#d5e1e5}*{box-sizing:border-box}html{scroll-padding-top:1rem}body{margin:0;background:#f3f7f8;color:var(--ink);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:3px}a:focus-visible{outline:3px solid #cc7d19;outline-offset:4px}.skip{position:absolute;top:-100px;left:1rem;background:white;padding:1rem}.skip:focus{top:1rem}header{background:#153d4a;color:white;padding:3.5rem max(1.25rem,calc((100% - 1100px)/2))}header p{max-width:760px;color:#deebef}h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.2;margin:.4rem 0 1rem}.eyebrow{letter-spacing:.1em;font-size:.8rem;text-transform:uppercase}.download{display:inline-block;background:#fff;color:#164650;border-radius:7px;padding:.65rem 1rem;font-weight:650;text-decoration:none}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:2rem;max-width:1140px;margin:2rem auto;padding:0 1.25rem}nav{align-self:start;position:sticky;top:1rem}nav a{display:block;padding:.6rem 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:.95rem}nav strong{display:block;margin-bottom:.5rem}section{background:white;border:1px solid var(--line);border-radius:12px;padding:1.7rem;margin-bottom:1.5rem}h2{font-size:1.45rem;line-height:1.4;margin:0 0 1.2rem}p{margin:.8rem 0 1.1rem}.table-wrap{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.95rem}td,th{padding:.8rem;text-align:left;border:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}th{background:#eaf3f4}td:first-child{font-weight:600;width:32%}figure{margin:1.5rem 0}img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}figcaption{font-size:.8rem;color:var(--muted);margin-top:.4rem}.notice{padding:1rem;border-left:4px solid #cc7d19;background:#fff6e6}footer{max-width:1100px;margin:1rem auto 3rem;padding:0 1.25rem;color:var(--muted);font-size:.9rem}@media(max-width:800px){.layout{grid-template-columns:1fr;gap:1.25rem}nav{position:static}section{padding:1.1rem}header{padding:2rem 1.25rem}td,th{padding:.6rem}}@media print{body{background:white;color:black;font-size:11pt}header{background:white;color:black;padding:0}header p{color:black}.layout{display:block;margin:0;padding:0}nav,.download,.skip,figcaption,footer{display:none}section{border:0;padding:0}tr,figure{break-inside:avoid}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#manual">Μετάβαση στο εγχειρίδιο</a>
+<header><div class="eyebrow">Dr House · ICU Scenario Training</div><h1>Εγχειρίδιο χρήστη</h1><p>Εκπαιδευτική προσομοίωση ΜΕΘ</p><p>Περιηγηθείτε στον εικονικό θάλαμο, παρακολουθήστε τις ενδείξεις του ασθενούς, εκτελέστε τις ενέργειες του σεναρίου και συμπληρώστε τον ηλεκτρονικό φάκελο ασθενούς (EHR).</p><a class="download" href="ICU_User_Manual.odt" download>Λήψη εγχειριδίου (.odt)</a></header>
+<div class="layout"><nav aria-label="Περιεχόμενα"><strong>Περιεχόμενα</strong><a href="#section-1">1. Εκκίνηση και επιλογή σεναρίου</a>
+<a href="#section-2">2. Βασικός χειρισμός</a>
+<a href="#section-3">3. Οδηγίες και αλληλεπιδράσεις</a>
+<a href="#section-4">4. Καταχώριση στον ηλεκτρονικό φάκελο</a>
+<a href="#section-5">5. Ολοκλήρωση και αξιολόγηση</a>
+<a href="#section-6">6. Συνηθισμένες δυσκολίες</a>
+</nav><main id="manual"><section id="section-1"><h2>1. Εκκίνηση και επιλογή σεναρίου</h2>
+<p>Ανοίξτε την εφαρμογή. Αν χρησιμοποιείτε το project στο Unity, ανοίξτε τη σκηνή<br />Assets/Scenes/SampleScene.unity και πατήστε Play.</p>
+<p>1. Στο αρχικό μενού επιλέξτε Start Game. <br />2. Επιλέξτε ένα αρχείο σεναρίου από τη λίστα. <br />3. Πατήστε Start scenario για να ξεκινήσετε.</p>
+<div class="table-wrap"><table>
+<tr><th scope="col">Αρχείο</th><th scope="col">Θέμα σεναρίου</th></tr>
+<tr><td>scenario_1.json</td><td>ICU Oxygen Alert - συναγερμός οξυγόνωσης</td></tr>
+<tr><td>scenario_2.json</td><td>ICU Rising Temperature - αύξηση θερμοκρασίας</td></tr>
+<tr><td>scenario_3.json</td><td>ICU Circulation Alert - πτώση αρτηριακής πίεσης</td></tr>
+</table></div>
+<p>Το Bundled εμφανίζει τα ενσωματωμένα σενάρια. Για άλλο φάκελο, γράψτε τη διαδρομή και πατήστε Open folder ή χρησιμοποιήστε το Up one folder. Μπορείτε επίσης να επικολλήσετε την πλήρη διαδρομή αρχείου στο πεδίο Selected JSON file.</p>
+</section>
+<section id="section-2"><h2>2. Βασικός χειρισμός</h2>
+<div class="table-wrap"><table>
+<tr><th scope="col">Πλήκτρο / χειρισμός</th><th scope="col">Λειτουργία</th><th scope="col"></th></tr>
+<tr><td>W / A / S / D</td><td>Κίνηση εμπρός / αριστερά / πίσω / δεξιά</td><td></td></tr>
+<tr><td>Κίνηση ποντικιού</td><td>Αλλαγή κατεύθυνσης θέασης</td><td></td></tr>
+<tr><td>Αριστερό Shift + W</td><td>Ταχύτερη κίνηση προς τα εμπρός</td><td></td></tr>
+<tr><td>Space</td><td>Άλμα</td><td></td></tr>
+<tr><td>Tab</td><td>Εμφάνιση / απόκρυψη οδηγιών και ελεύθερου δείκτη</td><td></td></tr>
+<tr><td>E</td><td>Έλεγχος μόνιτορ, όταν το κοιτάζετε από κοντά</td><td></td></tr>
+<tr><td>Αριστερό κλικ</td><td>Χρήση διαδραστικών αντικειμένων και κουμπιών</td><td></td></tr>
+</table></div>
+</section>
+<section id="section-3"><h2>3. Οδηγίες και αλληλεπιδράσεις</h2>
+<p>Πατήστε Tab για να διαβάσετε το τρέχον μήνυμα. Όταν εμφανίζεται το CONTINUE, πατήστε το για να προχωρήσετε. Πατήστε ξανά Tab για να επιστρέψετε στη θέαση με το ποντίκι.</p>
+<p>Πλησιάστε το αντικείμενο που χρειάζεστε και στοχεύστε το με το σημάδι στο κέντρο της οθόνης. Ακολουθήστε την ένδειξη αλληλεπίδρασης που εμφανίζεται.</p>
+<div class="table-wrap"><table>
+<tr><th scope="col">Αντικείμενο</th><th scope="col">Ενέργεια χρήστη</th></tr>
+<tr><td>Μόνιτορ ζωτικών ενδείξεων</td><td>Κοιτάξτε το μόνιτορ και πατήστε E για να καταγραφεί ο έλεγχος.</td></tr>
+<tr><td>Αναπνευστήρας</td><td>Κάντε αριστερό κλικ στο κουμπί του. Η πράσινη ένδειξη σηματοδοτεί την ενεργοποίηση.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Κουμπί κλήσης βοήθειας</td><td>Κάντε αριστερό κλικ στο κουμπί κλήσης.Ενεργοποιείται η κόκκινη ένδειξη.</td></tr>
+<tr><td>Ασθενής / κρεβάτι</td><td>Κάντε αριστερό κλικ στο διαδραστικό σημείο του ασθενούς / κρεβατιού για να καταγραφεί ο έλεγχος.<br /></td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Τερματικό EHR</td><td>Στοχεύστε το τερματικό στο κέντρο της οθόνης και κάντε αριστερό κλικ. Ο δείκτης ελευθερώνεται για την καταχώριση.</td></tr>
+</table></div>
+<figure><a href="assets/manual-1.jpg"><img src="assets/manual-1.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-2.jpg"><img src="assets/manual-2.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<p>Tab</p>
+<figure><a href="assets/manual-3.jpg"><img src="assets/manual-3.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-4.jpg"><img src="assets/manual-4.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-5.jpg"><img src="assets/manual-5.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-6.jpg"><img src="assets/manual-6.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-7.jpg"><img src="assets/manual-7.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-8.jpg"><img src="assets/manual-8.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-9.jpg"><img src="assets/manual-9.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<figure><a href="assets/manual-10.jpg"><img src="assets/manual-10.jpg" alt="Στιγμιότυπο από την εκπαιδευτική προσομοίωση ΜΕΘ" loading="lazy" /></a><figcaption>Επιλέξτε την εικόνα για πλήρες μέγεθος.</figcaption></figure>
+<p>Οι αριθμημένες επιλογές του σεναρίου περιγράφουν τις διαθέσιμες ενέργειες. Η επιλογή καταγράφεται όταν χρησιμοποιήσετε τον αντίστοιχο εξοπλισμό&#183; δεν επιλέγεται με τα αριθμητικά πλήκτρα.</p>
+<p class="notice">Χρονικό όριο: στα ενσωματωμένα σενάρια, το στάδιο επιλογής ενέργειας δίνει 8 δευτερόλεπτα. Αν παρέλθουν χωρίς την απαιτούμενη ενέργεια, το σενάριο ακολουθεί την πορεία καθυστέρησης. Το Tab δεν διακόπτει τον χρόνο.</p>
+</section>
+<section id="section-4"><h2>4. Καταχώριση στον ηλεκτρονικό φάκελο</h2>
+<p>Όταν ζητηθεί η τεκμηρίωση, ανοίξτε το EHR και συμπληρώστε και τα πέντε πεδία με τις τρέχουσες ενδείξεις του μόνιτορ:</p>
+<div class="table-wrap"><table>
+<tr><th scope="col">Πεδίο</th><th scope="col">Τι καταχωρίζεται</th></tr>
+<tr><td>HR</td><td>Καρδιακή συχνότητα - αριθμός χωρίς μονάδα</td></tr>
+<tr><td>SpO2</td><td>Κορεσμός οξυγόνου - αριθμός χωρίς το σύμβολο %</td></tr>
+<tr><td>Temp</td><td>Θερμοκρασία - δεκαδικός αριθμός, με τελεία ή κόμμα</td></tr>
+<tr><td>RR</td><td>Αναπνευστική συχνότητα - αριθμός χωρίς μονάδα</td></tr>
+<tr><td>BP</td><td>Συστολική/διαστολική πίεση, π.χ. 120/80</td></tr>
+</table></div>
+<p>Στο Assessment Note γράψτε σύντομη σημείωση με όσα παρατηρήσατε και τις ενέργειες που εκτελέσατε. Πατήστε SAVE DOCUMENTATION. Για να προχωρήσει το σενάριο, χρειάζονται συμπληρωμένα τα πέντε πεδία, η σημείωση και αποθήκευση.</p>
+</section>
+<section id="section-5"><h2>5. Ολοκλήρωση και αξιολόγηση</h2>
+<p>Στην τελική οθόνη SCENARIO COMPLETE εμφανίζονται η βαθμολογία (Final score) και η ακρίβεια των καταχωρήσεων (EHR accuracy). Η σύγκριση γίνεται με τις ενδείξεις του ασθενούς τη στιγμή της αποθήκευσης.</p>
+<div class="table-wrap"><table>
+<tr><th scope="col">Ένδειξη</th><th scope="col">Σημασία</th></tr>
+<tr><td>Match</td><td>Η καταχώριση συμφωνεί με το μόνιτορ.</td></tr>
+<tr><td>Mismatch</td><td>Η καταχώριση διαφέρει από την ένδειξη του μόνιτορ.</td></tr>
+<tr><td>Missing</td><td>Το πεδίο έμεινε κενό.</td></tr>
+<tr><td>Invalid</td><td>Η τιμή δεν έχει αποδεκτή αριθμητική μορφή.</td></tr>
+</table></div>
+<p>Το EHR accuracy: 5/5 σημαίνει ότι συμφωνούν και οι πέντε καταχωρίσεις. Η επιτυχής αποθήκευση από μόνη της δεν επιβεβαιώνει την ορθότητά τους. Η βαθμολογία ενεργειών εμφανίζεται χωριστά από την ακρίβεια του EHR.Στην τρέχουσα αξιολόγηση των ενσωματωμένων σεναρίων, η ενεργοποίηση αναπνευστήρα και κλήσης βοήθειας δίνει 100 βαθμούς, η εκτέλεση μίας από τις δύο ενέργειες 65 και καμίας 30.</p>
+<p>Μελετήστε τo feedback και πατήστε Exit Game για έξοδο. Για νέα προσπάθεια, ανοίξτε ξανά την εφαρμογή ή ξεκινήστε νέο Play στο Unity και επιλέξτε σενάριο.</p>
+</section>
+<section id="section-6"><h2>6. Συνηθισμένες δυσκολίες</h2>
+<div class="table-wrap"><table>
+<tr><th scope="col">Πρόβλημα</th><th scope="col">Τι να κάνετε</th></tr>
+<tr><td>Δεν εμφανίζονται σενάρια.</td><td>Πατήστε Bundled ή επιλέξτε τον σωστό φάκελο. Το patientVitals.json δεν είναι αρχείο σεναρίου.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Cannot load scenario</td><td><br />Ελέγξτε τη διαδρομή και χρησιμοποιήστε ένα από τα ενσωματωμένα scenario_1/2/3.json. Ένα οποιοδήποτε JSON δεν αρκεί.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Δεν ανταποκρίνεται ένα αντικείμενο.</td><td>Πλησιάστε περισσότερο και στοχεύστε το σωστό σημείο. Για το μόνιτορ χρησιμοποιήστε E, για τα υπόλοιπα αντικείμενα αριστερό κλικ.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Δεν περιστρέφεται η κάμερα.</td><td><br />Κλείστε τις οδηγίες με Tab. Αν βρίσκεστε στο EHR, ολοκληρώστε την καταχώριση και πατήστε SAVE DOCUMENTATION.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>Το σενάριο δεν προχωρά μετά το EHR.</td><td>Ελέγξτε ότι έχουν συμπληρωθεί όλα τα πεδία ζωτικών ενδείξεων και το Assessment Note και αποθηκεύστε ξανά.</td></tr>
+</table></div>
+<p>Το κουμπί Help εμφανίζεται με το Tab και ανοίγει τον σύνδεσμο βοήθειας.</p>
+</section>
+</main></div>
+<footer>Dr House ICU Training · <a href="#">Επιστροφή στην αρχή</a></footer>
+</body>
+</html>
